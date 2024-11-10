@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck Booking Form</title>
+  <link rel="stylesheet" href="/css/style3.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Truck Booking</h2>
+    <form id="bookingForm">
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" placeholder="Enter pickup location" required>
+
+      <label for="dropoff">Drop-off Location:</label>
+      <input type="text" id="dropoff" placeholder="Enter drop-off location" required>
+
+      <label for="loadType">Load Type:</label>
+      <select id="loadType">
+        <option value="full">Full Load</option>
+        <option value="partial">Partial Load</option>
+      </select>
+
+      <label for="distance">Distance (km):</label>
+      <input type="number" id="distance" placeholder="Enter distance" required>
+
+      <button type="button" onclick="calculateFare()">Calculate Fare</button>
+    </form>
+    <p id="fareOutput"></p>
+  </div>
+  <script src="/scripts/script3.js"></script>
+</body>
+</html>

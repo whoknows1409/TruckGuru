@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TruckGuru</title>
+    <link rel="stylesheet" href="/css/style4.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png" alt="TruckGuru Logo">
+      </div>
+      <div class="contact">Contact Us</div>
+    </div>
+    <div class="location">
+      <span class="location-item">Your Location</span>
+      <span class="location-item">→</span>
+      <span class="location-item">Destination</span>
+    </div>
+    <form id="contactForm" class="form" onsubmit="handleSubmit(event)">
+      <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email (Optional)</label>
+        <input type="email" id="email" class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="mobile" class="form-label">Mobile No.</label>
+        <textarea id="mobile" class="form-textarea" rows="1" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Next</button>
+    </form>
+  </div>
+  <script src="/scripts/script4.js"></script>
+</body>
+</html>

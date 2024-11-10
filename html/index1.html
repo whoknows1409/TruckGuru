@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TruckGuru - Book a Truck</title>
+    <link rel="stylesheet" href="/css/style1.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>TruckGuru</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Main Page Banner) -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Find and Book the Best Trucks for Your Cargo</h2>
+            <p>Reliable, cost-effective transport solutions for all your needs.</p>
+            <button onclick="location.href='#searchForm'">Start Your Search</button>
+        </div>
+    </section>
+
+    <!-- Search Form Section -->
+    <section class="search-form" id="searchForm">
+        <h2>Search for Available Trucks</h2>
+        <form id="truckSearch" onsubmit="return searchTrucks(event)">
+            <div class="form-group">
+                <label for="origin">Pick-Up Location</label>
+                <input type="text" id="origin" name="origin" placeholder="Enter city" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Drop-Off Location</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter city" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo-type">Cargo Type</label>
+                <select id="cargo-type" name="cargo-type" required>
+                    <option value="general">General Goods</option>
+                    <option value="perishable">Perishable Goods</option>
+                    <option value="hazardous">Hazardous Materials</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (in Kg)</label>
+                <input type="number" id="weight" name="weight" placeholder="Enter cargo weight" required>
+            </div>
+            <button type="submit">Search Trucks</button>
+        </form>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form" id="booking">
+        <h2>Book a Truck</h2>
+        <form id="bookTruckForm">
+            <div class="form-group">
+                <label for="truckId">Select Truck</label>
+                <input type="text" id="truckId" name="truckId" placeholder="Truck ID" required>
+            </div>
+            <div class="form-group">
+                <label for="pickupTime">Pick-Up Time</label>
+                <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+            </div>
+            <div class="form-group">
+                <label for="deliveryTime">Expected Delivery Time</label>
+                <input type="datetime-local" id="deliveryTime" name="deliveryTime" required>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>&copy; 2024 TruckGuru. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/scripts/script1.js"></script>
+</body>
+</html>
